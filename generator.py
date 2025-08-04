@@ -1,3 +1,4 @@
+import os
 import random
 
 from PIL import Image, ImageDraw, ImageFont
@@ -38,10 +39,9 @@ def generate_decoder_image(
     # 2️⃣ Opaque cyan text
     overlay = Image.new("RGBA", (width, height), (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
-    try:
-        font = ImageFont.truetype("arial.ttf", font_size)
-    except OSError:
-        font = ImageFont.load_default()
+
+    font_path = os.path.join(os.path.dirname(__file__), "fonts", "arial.ttf")
+    font = ImageFont.truetype(font_path, size=font_size)
 
     bbox = draw.textbbox((0, 0), text, font=font)
     text_x = (width - (bbox[2] - bbox[0])) // 2
