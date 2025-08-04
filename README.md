@@ -1,6 +1,7 @@
 # 🔎 Decoder-Image-Generator
 
 ⭐ **Decoder Image Generator** is a simple [Streamlit](https://streamlit.io/) web app that allows you to create hidden-text *decoder images*. More specifically, these are special images where secret messages are embedded using a red-noise overlay and can only be revealed when viewed through red decoder glasses.
+You can try the app live [here](https://decoder-image-generator.streamlit.app).
 
 
 ## 🛠️ Project Setup
